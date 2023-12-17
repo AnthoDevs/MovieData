@@ -144,20 +144,21 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cardStack = UIStackView()
         let emptyView = UIView()
         let posterView = UIView()
+        let posterContainer = UIView()
         let posterImage = UIImageView()
         let infoView = UIView()
-//        cardView.backgroundColor = .gray
-//        cardStack.backgroundColor = .yellow
-//        emptyView.backgroundColor = .blue
-        posterView.backgroundColor = .white
-        infoView.backgroundColor = .white
         
+        infoView.backgroundColor = .white
+        posterContainer.backgroundColor = .white
+        
+        posterContainer.layer.cornerRadius = 10
+        posterContainer.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         posterView.layer.cornerRadius = 10
         posterView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         infoView.layer.cornerRadius = 10
         infoView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
-        
+        posterImage.layer.cornerRadius = 10
+        posterImage.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         cardStack.axis = .vertical
         cardStack.spacing = 0
         cardStack.distribution = .fillEqually
@@ -176,7 +177,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
         
         cardStack.addArrangedSubview(emptyView)
-        cardStack.addArrangedSubview(posterView)
+        cardStack.addArrangedSubview(posterContainer)
+        posterContainer.addSubview(posterView)
         posterView.addSubview(posterImage)
         cardStack.addArrangedSubview(infoView)
         cardView.addSubview(cardStack)
@@ -185,9 +187,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cardView.translatesAutoresizingMaskIntoConstraints = false
         cardStack.translatesAutoresizingMaskIntoConstraints = false
         posterImage.translatesAutoresizingMaskIntoConstraints = false
-//        emptyView.translatesAutoresizingMaskIntoConstraints = false
-//        posterView.translatesAutoresizingMaskIntoConstraints = false
-//        infoView.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.translatesAutoresizingMaskIntoConstraints = false
+        posterView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             cardView.topAnchor.constraint(equalTo: cell.topAnchor),
@@ -200,14 +201,18 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             cardStack.trailingAnchor.constraint(equalTo: cardView.trailingAnchor),
             emptyView.widthAnchor.constraint(equalTo: cardView.widthAnchor, multiplier: 0.8),
             emptyView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
+            posterView.heightAnchor.constraint(equalTo: cardStack.heightAnchor, multiplier: 0.6),
+            posterView.trailingAnchor.constraint(equalTo: posterContainer.trailingAnchor, constant: -25),
+            posterView.bottomAnchor.constraint(equalTo: posterContainer.bottomAnchor),
+            posterView.leadingAnchor.constraint(equalTo: posterContainer.leadingAnchor, constant: 25),
             posterImage.topAnchor.constraint(equalTo: posterView.topAnchor),
-            posterImage.trailingAnchor.constraint(equalTo: posterView.trailingAnchor, constant: -25),
+            posterImage.trailingAnchor.constraint(equalTo: posterView.trailingAnchor),
             posterImage.bottomAnchor.constraint(equalTo: posterView.bottomAnchor),
-            posterImage.leadingAnchor.constraint(equalTo: posterView.leadingAnchor, constant: 25)
+            posterImage.leadingAnchor.constraint(equalTo: posterView.leadingAnchor),
             
         ])
+        posterView.clipsToBounds = true
         
-        posterImage.contentMode = .scaleAspectFill
         return cell
     }
     
@@ -215,14 +220,5 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let width = collectionView.frame.width
         let height = collectionView.frame.height
         return CGSize(width: width, height: height)
-    }
-}
-
-extension UIView {
-   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        layer.mask = mask
     }
 }

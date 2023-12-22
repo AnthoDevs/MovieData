@@ -16,6 +16,7 @@ class HomeViewController: UIViewController{
     let network = HomeNetworkManager()
     let configuration = ConfigurationController()
     let media = MediaNetworkManager()
+
     let numberOfColumns = 1
     let cellSpacing: CGFloat = 0
     
@@ -64,7 +65,7 @@ class HomeViewController: UIViewController{
                     layout.scrollDirection = .horizontal
                     layout.collectionView?.isPagingEnabled = true
                 }
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "DefaultCell")
+        collectionView.register(CardMovieCell.self, forCellWithReuseIdentifier: "CardMovieCell")
     }
     func configureUI() {
         let headerView = headerView
@@ -137,82 +138,18 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DefaultCell", for: indexPath)
-        cell.contentView.subviews.forEach { $0.removeFromSuperview() }
-        
-        let cardView = UIView()
-        let cardStack = UIStackView()
-        let emptyView = UIView()
-        let posterView = UIView()
-        let posterContainer = UIView()
-        let posterImage = UIImageView()
-        let infoView = UIView()
-        
-        infoView.backgroundColor = .white
-        posterContainer.backgroundColor = .white
-        
-        posterContainer.layer.cornerRadius = 10
-        posterContainer.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        posterView.layer.cornerRadius = 10
-        posterView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        infoView.layer.cornerRadius = 10
-        infoView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        posterImage.layer.cornerRadius = 10
-        posterImage.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        cardStack.axis = .vertical
-        cardStack.spacing = 0
-        cardStack.distribution = .fillEqually
- 
-
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardMovieCell", for: indexPath) as! CardMovieCell
         guard let dataHomeModel = homeModel?.results[indexPath.item],
               let baseUrl = configuration.config?.images.secureBaseURL else { return UICollectionViewCell() }
         media.getImage(url: baseUrl, imagePath: dataHomeModel.posterPath) { response in
             switch response {
                 case .success(let success):
                     DispatchQueue.main.async {
-                        posterImage.image = success
+                        cell.configure(image: success)
                     }
                 case .failure(_): break
             }
         }
-        
-        cardStack.addArrangedSubview(emptyView)
-        cardStack.addArrangedSubview(posterContainer)
-        posterContainer.addSubview(posterView)
-        posterView.addSubview(posterImage)
-        cardStack.addArrangedSubview(infoView)
-        cardView.addSubview(cardStack)
-        cell.addSubview(cardView)
-        
-        cardView.translatesAutoresizingMaskIntoConstraints = false
-        cardStack.translatesAutoresizingMaskIntoConstraints = false
-        posterImage.translatesAutoresizingMaskIntoConstraints = false
-        emptyView.translatesAutoresizingMaskIntoConstraints = false
-        posterView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            cardView.topAnchor.constraint(equalTo: cell.topAnchor),
-            cardView.leadingAnchor.constraint(equalTo: cell.leadingAnchor),
-            cardView.bottomAnchor.constraint(equalTo: cell.bottomAnchor),
-            cardView.trailingAnchor.constraint(equalTo: cell.trailingAnchor),
-            cardStack.topAnchor.constraint(equalTo: cardView.topAnchor),
-            cardStack.leadingAnchor.constraint(equalTo: cardView.leadingAnchor),
-            cardStack.bottomAnchor.constraint(equalTo: cardView.bottomAnchor),
-            cardStack.trailingAnchor.constraint(equalTo: cardView.trailingAnchor),
-            emptyView.widthAnchor.constraint(equalTo: cardView.widthAnchor, multiplier: 0.8),
-            emptyView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
-            posterView.heightAnchor.constraint(equalTo: cardStack.heightAnchor, multiplier: 0.6),
-            posterView.trailingAnchor.constraint(equalTo: posterContainer.trailingAnchor, constant: -25),
-            posterView.bottomAnchor.constraint(equalTo: posterContainer.bottomAnchor),
-            posterView.leadingAnchor.constraint(equalTo: posterContainer.leadingAnchor, constant: 25),
-            posterImage.topAnchor.constraint(equalTo: posterView.topAnchor),
-            posterImage.trailingAnchor.constraint(equalTo: posterView.trailingAnchor),
-            posterImage.bottomAnchor.constraint(equalTo: posterView.bottomAnchor),
-            posterImage.leadingAnchor.constraint(equalTo: posterView.leadingAnchor),
-            
-        ])
-        posterView.clipsToBounds = true
-        
         return cell
     }
     

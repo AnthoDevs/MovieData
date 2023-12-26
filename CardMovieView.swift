@@ -52,14 +52,43 @@ class CardMovieCell: UICollectionViewCell {
     let infostack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.distribution = .fillEqually
+        stack.distribution = .fillProportionally
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
-    let titleLabel = UILabel()
-    let rating = UILabel()
-    let tags = UIStackView()
-    let actors = UIStackView()
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        return label
+    }()
+    let rating: UIStackView = {
+        let view = UIStackView()
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        return view
+    }()
+    let relaseDate: UIView = {
+       let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        return view
+    }()
+    let relaseLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
+        return label
+    }()
+    let releaseIcon: UIImageView = {
+        let releaseIcon = UIImageView()
+        releaseIcon.translatesAutoresizingMaskIntoConstraints = false
+        releaseIcon.image = UIImage(systemName: "calendar")
+        return releaseIcon
+    }()
+    
+    let overViewLabel = UILabel()
     var infoView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -80,8 +109,8 @@ class CardMovieCell: UICollectionViewCell {
         infoView.addSubview(infostack)
         infostack.addArrangedSubview(titleLabel)
         infostack.addArrangedSubview(rating)
-        infostack.addArrangedSubview(tags)
-        infostack.addArrangedSubview(actors)
+        infostack.addArrangedSubview(relaseDate)
+        infostack.addArrangedSubview(overViewLabel)
         NSLayoutConstraint.activate([
             cardView.topAnchor.constraint(equalTo: contentView.topAnchor),
             cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -101,6 +130,10 @@ class CardMovieCell: UICollectionViewCell {
             posterImage.trailingAnchor.constraint(equalTo: posterView.trailingAnchor),
             posterImage.bottomAnchor.constraint(equalTo: posterView.bottomAnchor),
             posterImage.leadingAnchor.constraint(equalTo: posterView.leadingAnchor),
+            infostack.topAnchor.constraint(equalTo: infoView.topAnchor),
+            infostack.trailingAnchor.constraint(equalTo: infoView.trailingAnchor, constant: -40),
+            infostack.bottomAnchor.constraint(equalTo: infoView.bottomAnchor),
+            infostack.leadingAnchor.constraint(equalTo: infoView.leadingAnchor, constant: 40),
         ])
     }
     
@@ -108,8 +141,24 @@ class CardMovieCell: UICollectionViewCell {
         super.init(coder: coder)
     }
     
-    func configure(image: UIImage) {
+    func configure(image: UIImage, homeModel: RequestResult) {
+        rating.arrangedSubviews.forEach { $0.removeFromSuperview() }
         posterImage.image = image
+        titleLabel.text = homeModel.title
+        relaseLabel.text = homeModel.releaseDate
+        overViewLabel.text = homeModel.overview
+        relaseDate.addSubview(relaseLabel)
+        relaseDate.addSubview(releaseIcon)
+        relaseLabel.trailingAnchor.constraint(equalTo: relaseDate.trailingAnchor).isActive = true
+        releaseIcon.trailingAnchor.constraint(equalTo: relaseLabel.leadingAnchor).isActive = true
+        
+        for _ in 1...Int(homeModel.voteAverage) {
+            let starView = UIImageView(image: UIImage(systemName: "star.fill"))
+            starView.translatesAutoresizingMaskIntoConstraints = false
+            starView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+            starView.tintColor = UIColor(red: CGFloat(0.96), green: CGFloat(0.89), blue: CGFloat(0.00), alpha: CGFloat(1.0))
+            rating.addArrangedSubview(starView)
+        }
     }
     
 }

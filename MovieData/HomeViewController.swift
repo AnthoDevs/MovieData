@@ -16,9 +16,7 @@ class HomeViewController: UIViewController{
     let network = HomeNetworkManager()
     let configuration = ConfigurationController()
     let media = MediaNetworkManager()
-
-    let numberOfColumns = 1
-    let cellSpacing: CGFloat = 0
+    var cacheImages: [String: UIImage] = [:]
     
     var headerView: UIView {
         let view = UIView()
@@ -123,31 +121,23 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         homeModel?.results.count ?? 0
     }
 
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        guard let dataHomeModel = homeModel?.results[indexPath.item],
-              let baseUrl = configuration.config?.images.secureBaseURL else { return }
-        media.getImage(url: baseUrl, imagePath: dataHomeModel.posterPath) { response in
-            switch response {
-                case .success(let success):
-                    DispatchQueue.main.async {
-                        self.backgroundImage.image = success
-                    }
-                case .failure(_): break
-            }
-        }
-    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardMovieCell", for: indexPath) as! CardMovieCell
         guard let dataHomeModel = homeModel?.results[indexPath.item],
               let baseUrl = configuration.config?.images.secureBaseURL else { return UICollectionViewCell() }
-        media.getImage(url: baseUrl, imagePath: dataHomeModel.posterPath) { response in
-            switch response {
-                case .success(let success):
-                    DispatchQueue.main.async {
-                        cell.configure(image: success)
-                    }
-                case .failure(_): break
+        if let image = self.cacheImages[dataHomeModel.posterPath] {
+            cell.configure(image: image, homeModel: dataHomeModel)
+        } else {
+            media.getImage(url: baseUrl, imagePath: dataHomeModel.posterPath) { response in
+                switch response {
+                    case .success(let success):
+                        DispatchQueue.main.async {
+                            self.backgroundImage.image = success
+                            self.cacheImages[dataHomeModel.posterPath] = success
+                            cell.configure(image: success, homeModel: dataHomeModel)
+                        }
+                    case .failure(_): break
+                }
             }
         }
         return cell

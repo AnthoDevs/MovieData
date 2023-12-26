@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2D695C0B-078A-4093-8C17-4969B0976E25"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieData/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2D695C0B-078A-4093-8C17-4969B0976E25 - 14451b01c5288b74"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "MovieData"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "2D695C0B-078A-4093-8C17-4969B0976E25 - 46168e0742712ede"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;MovieData.HomeModel, Swift.Error&gt;) -&gt; () in MovieData.HomeViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "MovieData"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "59FCC7A4-F495-4343-A8AD-F91AF4EB7AEB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -87,47 +39,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6821A716-0B4F-47C8-AD21-C2C0D89F26C2"
+            uuid = "760F8115-1A4C-4136-A733-40D4DA41D350"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieData/HomeViewController.swift"
+            filePath = "MovieData/Network/MediaNetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getImage(url:imagePath:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6821A716-0B4F-47C8-AD21-C2C0D89F26C2 - e84ae176f59d61e6"
+                  uuid = "760F8115-1A4C-4136-A733-40D4DA41D350 - 218ac46d5f1785f2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  symbolName = "MovieData.MediaNetworkManager.getImage(url: Swift.String, imagePath: Swift.String, completion: (Swift.Result&lt;__C.UIImage, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MovieData"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/Network/MediaNetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "1652">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "348">
                </Location>
                <Location
-                  uuid = "6821A716-0B4F-47C8-AD21-C2C0D89F26C2 - e84ae176f59d6e24"
+                  uuid = "760F8115-1A4C-4136-A733-40D4DA41D350 - 218ac46d5f1785f2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  symbolName = "MovieData.MediaNetworkManager.getImage(url: Swift.String, imagePath: Swift.String, completion: (Swift.Result&lt;__C.UIImage, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MovieData"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/Network/MediaNetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1652">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "448">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -135,188 +87,78 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ECD60342-B19E-4031-BB78-D019A65DE18E"
+            uuid = "68C52B28-02AB-40BA-B895-453C0589CC89"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieData/HomeViewController.swift"
+            filePath = "CardMovieView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "HomeViewController"
-            landmarkType = "21">
-            <Locations>
-               <Location
-                  uuid = "ECD60342-B19E-4031-BB78-D019A65DE18E - e84ae176f59d60b8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
-                  moduleName = "MovieData"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "204">
-               </Location>
-               <Location
-                  uuid = "ECD60342-B19E-4031-BB78-D019A65DE18E - 8fa08ede3fa7a27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, numberOfItemsInSection: Swift.Int) -&gt; Swift.Int"
-                  moduleName = "MovieData"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "ECD60342-B19E-4031-BB78-D019A65DE18E - 8fa08ede3fa7ae1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, numberOfItemsInSection: Swift.Int) -&gt; Swift.Int"
-                  moduleName = "MovieData"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B3144179-5960-488B-9B86-AB3BCAE68E79"
+            uuid = "67033542-0B62-4D04-9BA3-81D135061157"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieData/HomeViewController.swift"
+            filePath = "CardMovieView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "HomeViewController"
-            landmarkType = "21">
-            <Locations>
-               <Location
-                  uuid = "B3144179-5960-488B-9B86-AB3BCAE68E79 - e84ae176f59d60fe"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
-                  moduleName = "MovieData"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "648">
-               </Location>
-               <Location
-                  uuid = "B3144179-5960-488B-9B86-AB3BCAE68E79 - e84ae176f59d60dd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
-                  moduleName = "MovieData"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "204">
-               </Location>
-               <Location
-                  uuid = "B3144179-5960-488B-9B86-AB3BCAE68E79 - e84ae176f59d6103"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
-                  moduleName = "MovieData"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "204">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F3C2DFB4-8505-435C-ADFC-5EFA5A607004"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MovieData/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "configure(image:homeModel:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F3C2DFB4-8505-435C-ADFC-5EFA5A607004 - 46168e0742712ebd"
+                  uuid = "67033542-0B62-4D04-9BA3-81D135061157 - 9fb6920f9ee6f2c9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;MovieData.HomeModel, Swift.Error&gt;) -&gt; () in MovieData.HomeViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "MovieData.CardMovieCell.configure(image: __C.UIImage, homeModel: MovieData.RequestResult) -&gt; ()"
                   moduleName = "MovieData"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/CardMovieView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "172">
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1240">
                </Location>
                <Location
-                  uuid = "F3C2DFB4-8505-435C-ADFC-5EFA5A607004 - 46168e0742712ebd"
+                  uuid = "67033542-0B62-4D04-9BA3-81D135061157 - 9fb6920f9ee6f2c9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;MovieData.HomeModel, Swift.Error&gt;) -&gt; () in MovieData.HomeViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "MovieData.CardMovieCell.configure(image: __C.UIImage, homeModel: MovieData.RequestResult) -&gt; ()"
                   moduleName = "MovieData"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/CardMovieView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "368">
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1916">
                </Location>
                <Location
-                  uuid = "F3C2DFB4-8505-435C-ADFC-5EFA5A607004 - 46168e0742712e7b"
+                  uuid = "67033542-0B62-4D04-9BA3-81D135061157 - 9fb6920f9ee6f2c9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;MovieData.HomeModel, Swift.Error&gt;) -&gt; () in MovieData.HomeViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "MovieData.CardMovieCell.configure(image: __C.UIImage, homeModel: MovieData.RequestResult) -&gt; ()"
                   moduleName = "MovieData"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/CardMovieView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "368">
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1944">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -324,17 +166,176 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F26D7B9B-75F6-4285-9AB2-D772B463C269"
+            uuid = "E3B88178-8CC8-4574-9A54-D18C998CBD21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardMovieView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "configure(image:homeModel:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E3B88178-8CC8-4574-9A54-D18C998CBD21 - 9fb6920f9ee6fdf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieData.CardMovieCell.configure(image: __C.UIImage, homeModel: MovieData.RequestResult) -&gt; ()"
+                  moduleName = "MovieData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/CardMovieView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "E3B88178-8CC8-4574-9A54-D18C998CBD21 - 9fb6920f9ee6fdf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieData.CardMovieCell.configure(image: __C.UIImage, homeModel: MovieData.RequestResult) -&gt; ()"
+                  moduleName = "MovieData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/CardMovieView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "E3B88178-8CC8-4574-9A54-D18C998CBD21 - 9fb6920f9ee6fdf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieData.CardMovieCell.configure(image: __C.UIImage, homeModel: MovieData.RequestResult) -&gt; ()"
+                  moduleName = "MovieData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/CardMovieView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B72523E-9F91-4353-95E9-CDCF7C1CF723"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieData/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5B72523E-9F91-4353-95E9-CDCF7C1CF723 - 8fa08ede3fa6c58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, numberOfItemsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "MovieData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "5B72523E-9F91-4353-95E9-CDCF7C1CF723 - e84ae176f59d7626"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "MovieData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4583219B-C85C-4C6C-B2A4-7345AE7586F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieData/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2B50D9B-A6D3-4550-9C55-D623FA3D9E7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieData/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F2B50D9B-A6D3-4550-9C55-D623FA3D9E7E - e84ae176f59d76cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "MovieData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "2208">
+               </Location>
+               <Location
+                  uuid = "F2B50D9B-A6D3-4550-9C55-D623FA3D9E7E - da66cdd783a024c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;__C.UIImage, Swift.Error&gt;) -&gt; () in MovieData.HomeViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "MovieData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anthonysantiago/Documents/Proyectos/iOS/MovieData/MovieData/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -1,0 +1,22 @@
+# Xcode
+.DS_Store
+xcuserdata/
+
+# macOS
+.idea/
+
+# Swift build products
+.build/
+DerivedData/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# SPM (Swift Package Manager)
+Packages/
+Package.resolved
+.build/
